@@ -61,19 +61,119 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 
-cara clone :
-# Laravel + React + Vite Project
+# 🧠 siEksa
 
-## Requirements
-- PHP >= 8.2
-- Composer
-- Node.js & npm
+Sistem Informasi Ekskul — Dibangun pakai **Laravel 12 + InertiaJS + React + Vite**.
+
+## 🚀 Tech Stack
+
+- **Laravel 12** — Backend utama
+- **Inertia.js** — Jembatan Laravel + React tanpa REST API
+- **React** — Frontend SPA
+- **Vite** — Build tool modern (super cepat)
+- **Tailwind CSS** — Styling
+- **Sanctum** — Auth middleware
+- **Ziggy** — Router Laravel di JS
 
 ---
 
-## Installation
+## ⚙️ Cara Clone & Setup Project (Dev)
 
-1. Clone repo ini:
-   ```bash
-   git clone <repo-url>
-   cd <repo-folder>
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/ArzeonXyl/siEksa.git
+cd siEksa
+```
+
+### 2. Install Dependency Laravel
+
+```bash
+composer install
+```
+
+### 3. Install Dependency Frontend (React)
+
+```bash
+npm install
+```
+
+### 4. Setup File Environment
+
+```bash
+cp .env.example .env
+```
+
+> Edit `.env` sesuai kebutuhan lokal, terutama:
+> - `DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`
+> - `APP_URL=http://localhost:8000`
+> - `VITE_APP_NAME=siEksa`
+
+Lalu generate app key:
+
+```bash
+php artisan key:generate
+```
+
+### 5. Migrasi Database
+
+Pastikan database udah dibuat, lalu:
+
+```bash
+php artisan migrate
+```
+
+### 6. Link Storage (untuk gambar/file upload)
+
+```bash
+php artisan storage:link
+```
+
+---
+
+## 🧪 Cara Menjalankan Project
+
+Jalankan Laravel + React (Vite) bersamaan:
+
+```bash
+npm run dev
+```
+
+Akses di: [http://localhost:8000](http://localhost:8000)
+
+---
+
+## 🛠️ Script Tambahan
+
+### Serve Manual (jika perlu)
+
+```bash
+php artisan serve
+npm run dev
+```
+
+### Build Untuk Production
+
+```bash
+npm run build
+```
+
+---
+
+## 🧼 Note
+
+- `.env` TIDAK di-commit, tapi `.env.example` disediakan.
+- Pastikan `VITE_*` di `.env` sesuai config lo.
+- Kalau muncul error `Vite manifest not found`, berarti `npm run dev` belum dijalankan.
+
+---
+
+## 👥 Kontributor
+
+- Aldi / ArzeonXyl (Lead Dev)
+
+---
+
+## 🧩 Lisensi
+
+MIT License — bebas dipakai, asal jangan buat kejahatan 😎
