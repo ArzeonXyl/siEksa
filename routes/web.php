@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\StudentDashboardController;
+use App\Http\Controllers\FormClassroomController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -25,3 +27,14 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+# student web dashboard
+
+
+Route::get('/student/dashboard', [StudentDashboardController::class, 'index'])->name('student.dashboard');
+Route::get('/student/classroom', [StudentDashboardController::class, 'classroom']);
+
+Route::get('/student/formclassroom', function () {
+    return Inertia::render('FormClassroom');
+})->name('student.formclassroom');
+

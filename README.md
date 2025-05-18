@@ -170,7 +170,10 @@ npm run build
 
 ## 👥 Kontributor
 
-- Aldi / ArzeonXyl (Lead Dev)
+- Fathan / fthndev (lead Dev)
+- Aldi / ArzeonXyl ( Dev)
+- Dion / dhyos ( Dev)
+- Fariel / Frinzz03 ( Dev)
 
 ---
 

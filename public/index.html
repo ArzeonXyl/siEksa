@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom Dashboard</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        .sidebar {
+            background-color: #2c3e50;
+            color: white;
+            height: 100vh;
+            position: fixed;
+            width: 250px;
+            z-index: 1000;
+        }
+        
+        .sidebar .nav-link {
+            color: white;
+            padding: 15px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .sidebar .nav-link:hover {
+            background-color: #34495e;
+        }
+        
+        .sidebar .nav-link.active {
+            background-color: #3498db;
+        }
+        
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            background-color: #f5f6fa;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            background-color: #3498db;
+            color: white;
+            border-radius: 15px 15px 0 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="p-4">
+            <h3><i class="fas fa-school"></i> Classroom</h3>
+        </div>
+        <nav class="nav flex-column">
+            <a class="nav-link active" href="#"><i class="fas fa-home"></i> Dashboard</a>
+            <a class="nav-link" href="#"><i class="fas fa-chalkboard"></i> My Classes</a>
+            <a class="nav-link" href="#"><i class="fas fa-users"></i> Students</a>
+            <a class="nav-link" href="#"><i class="fas fa-tasks"></i> Assignments</a>
+            <a class="nav-link" href="#"><i class="fas fa-cog"></i> Settings</a>
+        </nav>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="row mb-4">
+            <div class="col-md-10">
+                <h1>Welcome to Classroom Dashboard</h1>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary rounded-circle"><i class="fas fa-plus"></i></button>
+            </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0"><i class="fas fa-chalkboard"></i> Total Classes</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <h2>12</h2>
+                        <p class="text-success"><i class="fas fa-arrow-up"></i> 12% from last month</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0"><i class="fas fa-users"></i> Total Students</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <h2>150</h2>
+                        <p class="text-success"><i class="fas fa-arrow-up"></i> 15% from last month</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0"><i class="fas fa-tasks"></i> Total Assignments</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <h2>45</h2>
+                        <p class="text-warning"><i class="fas fa-arrow-down"></i> 5% from last month</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Recent Activity</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1">New student joined "Mathematics 101"</h6>
+                                    <small>3 mins ago</small>
+                                </div>
+                                <p class="mb-1">Student ID: MTH001</p>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1">Assignment submitted by John Doe</h6>
+                                    <small>1 hour ago</small>
+                                </div>
+                                <p class="mb-1">Assignment: Algebra Homework</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Quick Actions</h5>
+                    </div>
+                    <div class="card-body">
+                        <button class="btn btn-primary btn-block mb-2"><i class="fas fa-plus"></i> Create New Class</button>
+                        <button class="btn btn-success btn-block mb-2"><i class="fas fa-file"></i> Upload Assignment</button>
+                        <button class="btn btn-info btn-block mb-2"><i class="fas fa-user-plus"></i> Add Student</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enrollment Statistics -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Enrollment Statistics</h5>
+                    </div>
+                    <div class="card-body">
+                        <!-- Chart akan ditempatkan di sini -->
+                        <div class="chart-container">
+                            <canvas id="enrollmentChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
